@@ -36,7 +36,7 @@ def book_seat(message):
 def process_booking(message):
     seat_number = message.text.strip().upper()  
     
-    if seat_number in seats:  
+    if seat_number(message):  
         if seats[seat_number]:  
             seats[seat_number] = False 
             bot.reply_to(message, f"Место {seat_number} успешно забронировано!")
